@@ -1,0 +1,10 @@
+name: scan-me-this
+
+services:
+  chall:
+    container_name: one
+    build:
+      context: .
+    ports:
+      - "5000:9998"
+    restart: always

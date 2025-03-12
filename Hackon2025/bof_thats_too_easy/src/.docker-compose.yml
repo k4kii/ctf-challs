@@ -1,0 +1,16 @@
+name: rop-enjoyer
+
+services:
+  challenge:
+    container_name: hackon-rop-enjoyer
+    privileged: true
+    build:
+      context: .
+      args:
+        FLAG: "HackOn{f4k3_fl4g_4_t3st1ng}"
+    environment:
+      JAIL_TIME: "60"
+      JAIL_MAX_CONNS_PER_IP: 3
+    ports:
+      - "7777:5000"
+    restart: always

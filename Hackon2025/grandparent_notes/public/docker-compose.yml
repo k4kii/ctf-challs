@@ -1,0 +1,8 @@
+services:
+  keasy:
+    build: .
+    privileged: true
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "6969:6969"

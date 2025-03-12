@@ -1,0 +1,10 @@
+name: bby-notes
+
+services:
+  chall:
+    container_name: pwn-bby-notes
+    build:
+      context: .
+    ports:
+      - "5000:9999"
+    restart: always

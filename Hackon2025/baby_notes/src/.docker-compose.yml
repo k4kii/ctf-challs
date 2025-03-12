@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  challenge:
+    privileged: true
+    image: registry.ctfd.io/hackon/pwn-baby-notes
+    environment:
+      JAIL_TIME: "60"
+      JAIL_MAX_CONNS_PER_IP: 3
+    ports:
+      - "6966:5000"
+    restart: on-failure
